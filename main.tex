@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{authblk}
+\usepackage{amsmath}
 
 \title{\bf Two dimensional discrete scan statistics with variable window shape}
 
@@ -27,6 +28,21 @@ The definition of the the two-dimensional discrete scan statistic with rectangul
 
 \section{Introduction}
 
-Let $T_1, T_2\geq 2$ be positive integers and consider the two dimensional rectangular region, $\mathcal{R}_2$, defined by $\mathcal{R}_2 = [0,T_1]\times[0,T_2]$. For each $1\leq s_j\leq T_j$, $j\in\{1,2\}$, one can associate to the elementary sub-region $r_2(s_1,s_2) = [s_1-1,s_1]\times[s_2-1,s_2]$ a real valued random variable $X_{s_1,s_2}$ such that the array of random variables $\left(X_{s_1,s_2}\right)_{1\leq s_j\leq T_j}$ is independent and identically distributed. 
+
+Let $T_1, T_2\geq 2$ be positive integers, $\mathcal{R}=[0, T_1]\times[0, T_2]$ be a rectangular region and $X_{s_1,s_2}$, $1\leq s_j\leq T_j$, $j\in\{1,2\}$, be an array of independent and identically distributed random variables from a specified distribution $G$ (Bernoulli, binomial, Poisson, normal, etc.) associated to the elementary sub-region $r(s_1,s_2) = [s_1-1,s_1]\times[s_2-1,s_2]$. The two dimensional scan statistics introduced by \cite{Chen1996} is defined as the largest number of events in any rectangular scanning window of size $m_1\times m_2$, where $1\leq m_1\leq T_1$ and $1\leq m_2\leq T_2$ are positive integers, within the rectangular region $\mathcal{R}$, i.e. 
+
+\begin{equation}\label{eq1}
+   S_{m_{1},m_{2}}(T_{1}, T_{2}) =\max_{\substack{1\leq i_1\leq T_1-m_1+1 \\ 1\leq i_2\leq T_2-m_2+1}}{Y_{i_1,i_2}}=\max_{\substack{1\leq i_1\leq T_1-m_1+1 \\ 1\leq i_2\leq T_2-m_2+1}}{\sum_{s_1=i_1}^{i_1+m_{1}-1}\sum_{s_2=i_2}^{i_2+m_{2}-1}X_{s_1,s_2}} 
+\end{equation}
+\noindent
+In this paper we present a natural extension of the classical definition of the two dimensional scan statistics by taking in Eq.~\ref{eq1}, instead of a moving sum, a moving \textit{score} evaluated with the help of a function applied on blocks of random variables. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{References/Reference_Chap_ScanGeom}
 
 \end{document}
